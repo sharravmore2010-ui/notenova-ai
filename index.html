@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NoteNova.AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        textarea {
+            width: 80%;
+            height: 150px;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 6px;
+            border: none;
+            background: #6366f1;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #output {
+            margin-top: 40px;
+            text-align: left;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>NoteNova.AI</h1>
+    <p>Transform your study material into structured notes.</p>
+
+    <textarea id="inputText" placeholder="Paste your lecture or content here..."></textarea>
+
+    <br>
+
+    <button onclick="generateNotes()">Generate Notes</button>
+
+    <div id="output"></div>
+
+    <script>
+        function generateNotes() {
+            const input = document.getElementById("inputText").value;
+            const output = document.getElementById("output");
+
+            output.innerHTML = `
+                <h2>Generated Notes (Demo)</h2>
+                <p>This is where AI-generated notes will appear.</p>
+                <p><strong>Your input:</strong> ${input}</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
